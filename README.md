@@ -1,1 +1,2 @@
 # proyectosAlgoritmos
+/*Para proyectos solamente-*/
