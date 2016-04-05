@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 		{
 			laberintoEnMatriz[renglones][columnas] = posicionEnArchivo;
 			columnas ++;
-			if (posicionEnArchivo == '0')
+			if (posicionEnArchivo == '0')		//En caso de querer buscar todos los puntos.
 				totalDePuntos ++;
 		}
 		else if (posicionEnArchivo == '\n')
@@ -152,7 +152,6 @@ int main(int argc, char *argv[])
 		printf("\n\tNo existe este punto en el laberinto. El programa se cerrara.\n");
 		exit(0);
 	}
-	
 
 //SE ABRE UN ARCHIVO PARA ALMACENAR LOS ARCHIVOS
 	archivoCaminos = fopen("Caminos.txt", "w+");
@@ -161,8 +160,8 @@ int main(int argc, char *argv[])
 		printf("\n\n\t\t***No se pudo abrir un archivo. El programa se cerrara.***");
 		exit(0);
 	}
+	fclose(archivoCaminos);
 
-	close(archivoCaminos);
 //BUSCADOR DE CAMINOS EN LABERINTO (ALGORITMO "DEPTH FIRST SEARCH")
 	while (todoRevisado == 0) 	//Se repite todo hasta que se hayan revisado todos los caminos
 	{

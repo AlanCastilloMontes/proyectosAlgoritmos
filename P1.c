@@ -173,8 +173,8 @@ int main(int argc, char *argv[])
 		printf("\n\n\t\t***No se pudo abrir un archivo. El programa se cerrara.***");
 		exit(0);
 	}
-
-	close(archivoCaminos);
+	fclose(archivoCaminos);
+	
 //BUSCADOR DE CAMINOS EN LABERINTO (ALGORITMO "DEPTH FIRST SEARCH")
 	while (todoRevisado == 0) 	//Se repite todo hasta que se hayan revisado todos los caminos
 	{
